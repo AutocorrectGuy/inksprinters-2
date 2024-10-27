@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input-text {
+    @apply w-full px-3 py-2 bg-[#102b36] text-cyan-50 outline-none border border-cyan-800 rounded-md placeholder:text-[#4c727c];
+  }
+  .input-label {
+    @apply text-white pr-2 whitespace-nowrap select-none;
+  }
+  .btn-primary {
+    @apply px-3 py-2 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-md text-white font-medium hover:brightness-110 select-none;
+  }
+  .btn-danger {
+    @apply px-3 py-2 bg-gradient-to-br from-red-600 to-rose-700 rounded-md text-white font-medium hover:brightness-110 select-none;
+  }
+}
+
+@keyframes spin-360 {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes orbit-150px {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes left-to-right-screen {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 105% 0; /* 100% glicthes on the connection a little bit*/
+  }
+}
+
+@keyframes spin-me {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hover-stop-animation:hover {
+  animation-play-state: paused !important;
+}
+
+.text-stroke {
+  text-shadow: 0 -2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000,
+    /* Direct shadows for N, E, S, W */ 1px 2px 0 #000, 2px 1px 0 #000, -1px 2px 0 #000, -2px 1px 0 #000,
+    1px -2px 0 #000, 2px -1px 0 #000, -1px -2px 0 #000, -2px -1px 0 #000, /* Diagonal shadows */ 2px 2px 0 #000,
+    -2px -2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000; /* Corner shadows to smooth out */
+}
+
+.char-bounce {
+  position: relative;
+  width: 60px;
+}
+
+.char-bounce > * {
+  position: absolute;
+  bottom: 0px;
+}
+
+.char-bounce > *:nth-child(1) {
+  left: 0px;
+  animation: char-bounce-animation 0.3s ease-out infinite alternate;
+}
+
+.char-bounce > *:nth-child(2) {
+  left: 20px;
+  animation: char-bounce-animation 0.3s ease-out infinite alternate;
+  animation-delay: 0.1s;
+}
+
+.char-bounce > *:nth-child(3) {
+  left: 40px;
+  animation: char-bounce-animation 0.3s ease-out infinite alternate;
+  animation-delay: 0.2s;
+}
+
+@keyframes char-bounce-animation {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
