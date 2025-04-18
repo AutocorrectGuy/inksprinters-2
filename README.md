@@ -46,10 +46,8 @@ So I built a simple WebGL-based renderer to fill the gap.
 ---
 
 ## 🧩 Stack
-- Pure **HTML/CSS/JS**
-- No frameworks, no dependencies
-- Fully offline / client-side
-- Can be deployed anywhere (or just opened locally)
+- React | Tailwindcss
+- Runnable as single page application
 
 ---
 
