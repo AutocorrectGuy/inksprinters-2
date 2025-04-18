@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# 🌐 Web Practice Playground
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a webpage I built to practice coding and to solve some real-world issues I’ve encountered at work. It started as an experimental playground and quickly turned into a small toolkit of useful, browser-based tools — no backend, no installs.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🖼️ Preview
 
-### `npm start`
+![Landing Page](./screen1.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⭐ Most Interesting Pages
 
-### `npm test`
+### 🔸 Local CRUD with IndexedDB
+Stores data directly in the browser using **IndexedDB**.  
+You can **add, delete, edit, export**, and **import** entries as `.csv` — all fully offline.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![CRUD with IndexedDB](./screen2.png)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔸 ASCII-Proof Font Generator 🧙‍♂️
+This one’s fun and weird.  
+Because some legacy software **doesn’t specify file encoding** (often falling back to Windows-1252 or worse), text files with non-ASCII characters would break silently.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+No one had access to the source code — so I made a workaround:
+- The tool **scans the file for non-ASCII characters**
+- Then it maps and swaps them with visually matching characters using a **custom font**
+- It outputs:
+  - A **clean ASCII-only text file**
+  - A **custom font file** that visually restores the original characters
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Result? 100% ASCII-safe file that won’t break in misconfigured apps ✨
 
-### `npm run eject`
+![ASCII Font Generator](./screen3.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔸 Cone & Cylinder Renderer 🧱
+For some reason, the software I work with didn’t support rendering basic 3D cone/cylinder shapes 🤷‍♂️  
+So I built a simple WebGL-based renderer to fill the gap.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Cone and Cylinder Renderer](./screen4.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 🧩 Stack
+- Pure **HTML/CSS/JS**
+- No frameworks, no dependencies
+- Fully offline / client-side
+- Can be deployed anywhere (or just opened locally)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Let me know if you want to try the hosted demo or run it locally!
+
+> I have another repo where I had `php` `laravel` backend and frontend that was designed by my good friend in Adobe Illustrator. I removed all the apis and stuff, because most of the problems were with pdf files that were mostly custom each time - so I learnt Adoble Illustrator for that. :D
