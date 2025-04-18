@@ -1,6 +1,6 @@
 # 🌐 Web Practice Playground
 
-This is a webpage I built to practice coding and to solve some real-world issues I’ve encountered at work. It started as an experimental playground and quickly turned into a small toolkit of useful, browser-based tools — no backend, no installs.
+This is a webpage I built to practice coding and to solve some real-world issues I’ve encountered at work. It started as an experimental playground and quickly turned into a small toolkit of useful, browser-based tools that I even by myself sometimes use at work.
 
 ---
 
